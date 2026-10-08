@@ -750,19 +750,19 @@
 <!-- Third-party libraries are loaded from ./vendor first so the app starts with NO internet
      (a CDN <script> that can't download leaves `L` / `supabase` undefined and kills the whole app).
      The CDN copy is only a fallback for when ./vendor hasn't been created yet. -->
-<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="./vendor/leaflet/leaflet.js"></script>
 <script>window.L || document.write('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>');</script>
 
 <!-- protomaps-leaflet exposes the global `protomapsL` (classic script, must run before the
      module below). PMTiles is NOT loaded here any more: protomaps-map.js imports ./pmtiles.js
      itself, so there is no window.PMTiles ordering dependency. Paths are relative so the app
      also works when hosted under a sub-path. -->
-<script src="/vendor/protomaps/protomaps-leaflet.js"></script>
+<script src="./vendor/protomaps/protomaps-leaflet.js"></script>
 <script>window.protomapsL || document.write('<script src="https://unpkg.com/protomaps-leaflet@5.0.1/dist/protomaps-leaflet.js"><\/script>');</script>
 
-<script src="/vendor/supabase/supabase.js"></script>
+<script src="./vendor/supabase/supabase.js"></script>
 <script>window.supabase || document.write('<script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"><\/script>');</script>
 
-<script src="/vendor/supabase/supabase.js"></script>
+<script src="./vendor/supabase/supabase.js"></script>
 
 </html>`
